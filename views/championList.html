@@ -1,0 +1,20 @@
+<div class="main" ng-controller="MainController">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-2 text-center" >
+            <h1>{{ champions.version }}</h1>
+            <h2><span>Donnees </span>{{ champions.type }}</h2>
+            <div class="champions" ng-repeat="hero in champions.data" style="background:#EEE; margin-bottom:5px; padding:5px; border-radius:3px">
+              <div class="row">
+                  <a href="#/details/{{$index}}">
+                    <div style="background: url('http://ddragon.leagueoflegends.com/cdn/{{ champions.version }}/img/sprite/{{hero.image.sprite}}') -{{hero.image.x}}px -{{hero.image.y}}px; width:48px;height:48px; margin:0 auto"></div>              
+					{{hero.name}}<br/>
+                    <small><em>{{hero.title}}</em></small><br/>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </ul>
+      </div>
