@@ -15,7 +15,7 @@
         <h1>lolchamps</h1>
         <form id="championSearchForm">
           <div class="form-group">
-            <input ng-model="search" type="search" class="form-control" placeholder="Search by champion name or type, ex: “Anivia”, or “Fighter”">
+            <input ng-model="search" placeholder="Search by champion name or type, ex: “Anivia”, or “Fighter”">
           </div>
         </form>
     </header>
@@ -27,7 +27,7 @@
                     <div id="free-rotation">
                         <ul>
                             <li ng-repeat="freeChamp in freeChamps">
-                                <img src="http://ddragon.leagueoflegends.com/cdn/5.8.1/img/champion/{{freeChamp.key}}.png">
+                                <img ng-src="http://ddragon.leagueoflegends.com/cdn/5.8.1/img/champion/{{freeChamp.key}}.png">
                                 <h5 class="text-center">{{ freeChamp.key }}</h5>
                             </li>
                         </ul>
@@ -38,7 +38,7 @@
                 <div id="allchampions">
                     <ul>
                         <li ng-repeat="champion in champions.data | filter:search">
-                            <img src="http://ddragon.leagueoflegends.com/cdn/5.8.1/img/champion/{{champion.key}}.png">
+                            <img ng-src="http://ddragon.leagueoflegends.com/cdn/5.8.1/img/champion/{{champion.key}}.png">
                             <h6 class="text-center">{{ champion.key }}</h6>
                         </li>
                     </ul>

@@ -23,19 +23,3 @@ app.controller('MainController', ['$scope', 'champions', 'freechampions', '$http
     
     
 }]);
-
-
-/*
-    success(function(data, status, headers, config) {
-		// success
-		for (i = 0; i < data.champions.length; ++i) {
-			$http({method: 'GET', url: 'https://eune.api.pvp.net/api/lol/static-data/eune/v1.2/champion/' + data.champions[i].id + '?api_key=' + API_KEY }).
-			success(function(data2, status2, headers2, config2) {
-				// success
-				freeChamps.push(data2);
-			}).
-			error(function(data2, status2, headers2, config2) {
-				// TODO error
-			});
-		}
-    })*/
