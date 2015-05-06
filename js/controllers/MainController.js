@@ -2,7 +2,8 @@ API_KEY = 'f1fe37d2-6955-48ce-bc41-7cbc084efd83';
 
 app.controller('MainController', ['$scope', 'champions', 'freechampions', '$http',  function($scope, champions, freechampions, $http) { 
  champions.success(function(data) { 
-     $scope.champions = data;
+     //$scope.champions = data;
+     $scope.champions = Object.keys(data.data).map(function (key) { return data.data[key]; });
      console.log($scope.champions);
   });
     
