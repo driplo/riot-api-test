@@ -1,6 +1,5 @@
 var app = angular.module('championsApp', ['ngRoute']);
 
-
 app.config(function ($routeProvider) { 
   $routeProvider 
     .when('/', { 
@@ -14,4 +13,4 @@ app.config(function ($routeProvider) {
     .otherwise({ 
       redirectTo: '/' 
     }); 
-})
+}).constant('apiKey', 'f1fe37d2-6955-48ce-bc41-7cbc084efd83');
