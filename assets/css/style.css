@@ -1,0 +1,79 @@
+body,html{
+    margin:0;
+    padding:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: 0;
+}
+
+header{
+    background: url('../img/headerbg.png') center;
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    background-size: cover; /* version standardisée */
+    height:350px;
+}
+
+header h1{
+    margin:0 auto;
+    text-align:center;
+    padding-top:50px;
+    color:#fff;
+}
+
+#championSearchForm{
+    text-align:center;
+    margin-top:70px;
+}
+
+#championSearchForm input{
+    margin: 0 auto;
+    border: none;
+    border-radius: 3px;
+    padding: 20px 10px;
+    width: 550px;
+}
+
+#championSearchForm input::-webkit-input-placeholder{
+    font-style:italic;
+}
+
+#championSearchForm input::-moz-placeholder{
+    font-style:italic;
+}
+
+#championSearchForm input:-ms-input-placeholder{
+    font-style:italic;
+}
+
+/**FREE ROTATION**/
+#free-rotation{
+    border-radius: 5px 5px 0 0;
+    position: relative;
+    bottom: 70px;
+    background: #fff;
+    padding:5px;
+}
+
+#free-rotation ul, #allchampions ul{
+    font-size:0;
+    padding:0;
+    text-align: center;
+}
+
+#free-rotation ul li, #allchampions ul li {
+  font-size: 14px;
+  display: inline-block;
+  width: 10%;
+  padding:5px;
+}
+
+#allchampions ul li {
+    width:7%;   
+}
+
+#free-rotation ul li img, #allchampions ul li img{
+    width:100%;
+    border-radius:2px;
+}
