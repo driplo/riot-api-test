@@ -2,7 +2,8 @@ API_KEY = 'f1fe37d2-6955-48ce-bc41-7cbc084efd83';
 
 app.controller('MainController', ['$scope', 'champions', 'freechampions', '$http',  function($scope, champions, freechampions, $http) { 
  champions.success(function(data) { 
-    $scope.champions = data;
+     $scope.champions = data;
+     console.log($scope.champions);
   });
     
     
@@ -16,6 +17,7 @@ app.controller('MainController', ['$scope', 'champions', 'freechampions', '$http
 				// success
 				freeChamps.push(data2);
                 $scope.freeChamps = freeChamps;
+                console.log($scope.freeChamps);
 			});
         }
     });

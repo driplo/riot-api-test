@@ -26,12 +26,12 @@
                <div class="row">
                     <div id="free-rotation">
                         <ul>
-                            <li ng-repeat="freeChamp in freeChamps">
+                            <li ng-repeat="freeChamp in freeChamps | filter:search">
                                 <img ng-src="http://ddragon.leagueoflegends.com/cdn/5.8.1/img/champion/{{freeChamp.key}}.png">
                                 <h5 class="text-center">{{ freeChamp.key }}</h5>
                             </li>
                         </ul>
-                        <h4 class="text-center">Weekly free to play rotation</h4>
+                        <h4 class="text-center">Weekly free to play champions rotation</h4>
                     </div>
                 </div>     
                 
@@ -39,7 +39,7 @@
                     <ul>
                         <li ng-repeat="champion in champions.data | filter:search">
                             <img ng-src="http://ddragon.leagueoflegends.com/cdn/5.8.1/img/champion/{{champion.key}}.png">
-                            <h6 class="text-center">{{ champion.key }}</h6>
+                            <h6 class="text-center">{{ champion.name }}</h6>
                         </li>
                     </ul>
                 </div>              

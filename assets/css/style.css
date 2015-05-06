@@ -54,6 +54,7 @@ header h1{
     bottom: 70px;
     background: #fff;
     padding:5px;
+    height:200px;
 }
 
 #free-rotation ul, #allchampions ul{
