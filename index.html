@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
     <link href="assets/css/style.css" rel="stylesheet" />
-
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-route/angular-route.min.js"></script>
   </head>
@@ -14,7 +13,7 @@
   <body ng-app="championsApp" ng-controller="MainController">
    
     <header id="page-header">
-      <h1>lolchamps</h1>
+      <h1><a href="index.html#/">lolchamps</a></h1>
         <form id="championSearchForm">
           <div class="form-group">
             <input ng-model="search" placeholder="Search by champion name or type, ex: “Anivia”, or “Fighter”">
@@ -22,38 +21,7 @@
         </form>
     </header>
     
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-           <div class="row">
-              <div id="free-rotation">
-
-                <ul>
-                  <li ng-repeat="freeChamp in freeChamps">
-                    <img ng-src="http://ddragon.leagueoflegends.com/cdn/5.8.1/img/champion/{{ freeChamp.key }}.png">
-                    <h5 class="text-center">{{ freeChamp.key }}</h5>
-                  </li>
-                </ul>
-
-                <h4 class="text-center">Weekly free to play champions rotation</h4>
-
-              </div>
-            </div>
-
-           <div id="allchampions">
-
-              <ul>
-                <li ng-repeat="champion in champions | filter: { name:search } | orderBy: 'name'">
-                  <img ng-src="http://ddragon.leagueoflegends.com/cdn/5.8.1/img/champion/{{ champion.key }}.png">
-                  <h6 class="text-center">{{ champion.name }}</h6>
-                </li>
-              </ul>
-
-            </div>
-
-        </div>
-      </div>
-    </div>
+    <div ng-view></div>
     
     <footer class="container">
       <small>Version: {{ champions.version }}</small>
@@ -66,6 +34,7 @@
     <script src="js/app.js"></script>
     <!-- Controllers -->
     <script src="js/controllers/MainController.js"></script>
+    <script src="js/controllers/ChampionController.js"></script>
     <!-- Services -->
 	  <script src="js/services/champions.js"></script>
     <!-- Directives -->
