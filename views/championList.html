@@ -14,7 +14,7 @@
                 <ul>    
                   <li ng-repeat="freeChamp in freeChamps">
                    <a href="#/{{freeChamp.id}}">
-                    <img ng-src="http://ddragon.leagueoflegends.com/cdn/5.8.1/img/champion/{{ freeChamp.key }}.png">
+                    <img ng-src="http://ddragon.leagueoflegends.com/cdn/{{ champions.version }}/img/champion/{{ freeChamp.key }}.png">
                     <h5 class="text-center">{{ freeChamp.key }}</h5>
                     </a>
                   </li>                
@@ -29,7 +29,7 @@
               <ul>
                 <li ng-repeat="champion in championsArray | filter: { name:search } | orderBy: 'name'">
                   <a href="#/{{champion.id}}">
-                      <img ng-src="http://ddragon.leagueoflegends.com/cdn/5.8.1/img/champion/{{ champion.key }}.png">
+                      <img ng-src="http://ddragon.leagueoflegends.com/cdn/{{ champions.version }}/img/champion/{{ champion.key }}.png">
                       <h6 class="text-center">{{ champion.name }}</h6>
                   </a>
                 </li>
