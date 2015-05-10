@@ -22,7 +22,16 @@
                 <div ng-repeat="skin in champion.skins" class="col-md-4 skin"><a href="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/{{champion.key}}_{{skin.num}}.jpg" target="_blank"><img ng-src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/{{champion.key}}_{{skin.num}}.jpg"/></a></div>
             </div>
             <div class="row abilities">
-                <h3 class="text-uppercase">Abilities</h3>    
+                <h3 class="text-uppercase">Abilities</h3>
+                <div class="row">
+                    <div class="col-md-1"><img ng-src="http://ddragon.leagueoflegends.com/cdn/{{ champions.version }}/img/passive/{{champion.passive.image.full}}"/></div>
+                    <div class="col-md-2">
+                        <h4>{{champion.passive.name}}</span></h4>
+                    </div>
+                    <div class="col-md-9">
+                        <p>{{champion.passive.description}}</p>
+                    </div>
+                </div>
                 <div class="row" ng-repeat="ability in champion.spells">
                     <div class="col-md-1"><img ng-src="http://ddragon.leagueoflegends.com/cdn/{{ champions.version }}/img/spell/{{ability.image.full}}"/></div>
                     <div class="col-md-2">
