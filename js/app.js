@@ -4,7 +4,7 @@ app.config(function ($routeProvider) {
   $routeProvider 
     .when('/', { 
       controller: 'MainController', 
-      templateUrl: 'views/championlist.html' 
+      templateUrl: 'views/championList.html' 
     })
     .when('/:championId',{
       controller:'ChampionController',
