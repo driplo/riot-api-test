@@ -1,5 +1,6 @@
-app.controller('ChampionController', ['$scope', '$routeParams', 'apiKey', '$http',
-  function($scope, $routeParams, apiKey, $http) {
+app.controller('ChampionController', ['$scope', '$routeParams', 'apiKey', '$http', '$sanitize',
+  function($scope, $routeParams, apiKey, $http) 
+  {
     $scope.championId = $routeParams.championId;
       $http({
         method: 'GET',
@@ -8,4 +9,12 @@ app.controller('ChampionController', ['$scope', '$routeParams', 'apiKey', '$http
         $scope.champion = data;
         console.log($scope.champion);
       });
-  }]);
+  }
+]);
+
+angular.module('championsApp')
+    .filter('to_trusted', ['$sce', function($sce){
+        return function(text) {
+            return $sce.trustAsHtml(text);
+        };
+}]);

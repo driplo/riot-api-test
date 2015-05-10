@@ -1,3 +1,50 @@
+<div class="bg-img" style="background-image:url('http://ddragon.leagueoflegends.com/cdn/img/champion/splash/{{champion.key}}_0.jpg')"></div>
+<div class="container" ng-controller="ChampionController">
+      <div class="row">
+        <div class="col-md-12">
+           <div class="row">
+               <a href=".#/"><i class="glyphicon glyphicon-arrow-left"></i> Back to the homepage</a>
+               <div class="hero-header">
+                  <h1>{{champion.name}}</h1>
+                  <h2>{{champion.title}}</h2>
+                  <p><span ng-repeat="tag in champion.tags" class="tag {{tag}}">{{tag}}</span><span class="{{champion.partype}} tag">{{champion.partype}}</span></p>
+               </div>
+            </div>
+        </div>
+        <div class="col-md-12 contain-champion">
+            <div class="row lore">
+                <img class="champ-pic" ng-src="http://ddragon.leagueoflegends.com/cdn/5.2.1/img/champion/{{champion.image.full}}" alt="{{champion.name}}"/>
+                <h3 class="text-uppercase">Lore</h3>
+                <p class="lore">{{champion.blurb}}<a href="#lorefull"> Read more</a></p>
+            </div>
+            <div class="row skins">
+                <h3 class="text-uppercase">Skins</h3>   
+                <div ng-repeat="skin in champion.skins" class="col-md-4 skin"><a href="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/{{champion.key}}_{{skin.num}}.jpg" target="_blank"><img ng-src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/{{champion.key}}_{{skin.num}}.jpg"/></a></div>
+            </div>
+            <div class="row abilities">
+                <h3 class="text-uppercase">Abilities</h3>    
+                <div class="row" ng-repeat="ability in champion.spells">
+                    <div class="col-md-1"><img ng-src="http://ddragon.leagueoflegends.com/cdn/5.7.2/img/spell/{{ability.image.full}}"/></div>
+                    <div class="col-md-2">
+                        <h4>{{ability.name}}</span></h4>
+                        <span><strong>CD:</strong> {{ability.cooldownBurn}}</span><br/>
+                        <span><strong>Cost:</strong> {{ability.costBurn}}</span><br/>
+                        <span><strong>Range:</strong> {{ability.rangeBurn}}</span>
+                    </div>
+                    <div class="col-md-9">
+                        <p>{{ability.description}}</p>
+                        <p ng-bind-html="ability.tooltip | to_trusted"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row lorefull">
+                <h3 class="text-uppercase">Lore</h3>
+                <p ng-bind-html="champion.lore"></p>
+            </div>    
+        </div>
+      </div>
+</div>
+<!--
 <div class="container" ng-controller="ChampionController">
       <div class="row">
         <div class="col-md-12">
@@ -8,4 +55,4 @@
           <p class="lore">{{champion.lore}}</p>
         </div>
       </div>
-    </div>
+    </div>-->

@@ -6,6 +6,73 @@ body,html{
     bottom: 0;
     top: 0;
     margin: 0;
+    background:#000a17;
+    font-family: 'Lato', sans-serif;
+}
+
+.Mana{
+    background-color:#42A5F5!important;
+}
+
+.bg-img {
+    position:absolute;
+    top:0;
+  width: 100%;
+  height: 100%;
+  background: url('http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zed_0.jpg') top center no-repeat;
+  background-size: cover;
+    z-index:0;
+}
+  
+.bg-img:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: -moz-linear-gradient(top,  rgba(255,137,137,0) 0%, rgba(0,10,23,0.5) 50%, rgba(0,10,23,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,137,137,0)), color-stop(50%,rgba(0,10,23,0.5)), color-stop(100%,rgba(0,10,23,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(255,137,137,0) 0%,rgba(0,10,23,0.5) 50%,rgba(0,10,23,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(255,137,137,0) 0%,rgba(0,10,23,0.5) 50%,rgba(0,10,23,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(255,137,137,0) 0%,rgba(0,10,23,0.5) 50%,rgba(0,10,23,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(255,137,137,0) 0%,rgba(0,10,23,0.5) 50%,rgba(0,10,23,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ff8989', endColorstr='#000a17',GradientType=0 ); /* IE6-9 */
+    opacity: 1; 
+}
+  
+
+h1{
+    color:#e5dc54;
+    font-size:5em;
+    text-shadow: 1px 1px 0.5px rgba(0,0,0,.5);
+    text-transform:uppercase;
+    font-family: 'Lato', sans-serif;
+}
+
+h2{
+    font-size:2.5em;
+    font-style:italic;
+    color:#fff;
+    text-shadow: 1px 1px 0.5px rgba(0,0,0,.5);
+    font-family: 'Droid Serif', serif;
+    font-weight:300;
+}
+
+.hero-header{
+    margin-top:100px;
+}
+
+.tag{
+    display:inline-block;
+    margin-top:15px;
+    padding:3px 8px;
+    background:#999;
+    border-radius:2px;
+    margin-right:7px;
+    text-transform:uppercase;
+    font-weight:bold;
+    color:#fff;
 }
 
 header{
@@ -77,4 +144,57 @@ header h1{
 #free-rotation ul li img, #allchampions ul li img{
     width:100%;
     border-radius:2px;
+}
+
+
+.lore{
+    color:#333;
+    text-align:justify;
+    letter-spacing:1px;
+    line-height:1.5em;
+}
+
+.lore h3, .abilities h4{
+    margin-top:0;
+}
+
+.contain-champion{
+    background:#EEE;
+    /*border:px solid #c67e21;*/
+    position:relative;
+    margin-top:150px;
+}
+
+.contain-champion .row{
+    padding:25px;
+    font-family: 'Droid Serif', serif;
+}
+
+.champ-pic{
+    float:left;
+    margin-right:25px;
+}
+
+.abilities{
+    
+}
+
+.abilities img{
+-webkit-box-shadow: inset 0px 0px 11px 3px rgba(50, 50, 50, 1);
+-moz-box-shadow:    inset 0px 0px 11px 3px rgba(50, 50, 50, 1);
+box-shadow:         inset 0px 0px 11px 3px rgba(50, 50, 50, 1);
+}
+
+.abilities .row{
+    border-top:1px solid #ccc;
+    padding: 25px 0;
+}
+
+.skin{
+    padding:0px;
+}
+
+.skins img{
+    width:100%;
+    padding: 10px;
 }

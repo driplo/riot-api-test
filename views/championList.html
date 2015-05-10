@@ -1,3 +1,11 @@
+ <header id="page-header">
+      <h1><a href="index.html#/">lolchamps</a></h1>
+        <form id="championSearchForm">
+          <div class="form-group">
+            <input ng-model="search" placeholder="Search by champion name or type, ex: “Anivia”, or “Fighter”">
+          </div>
+        </form>
+</header>
 <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -19,7 +27,7 @@
            <div id="allchampions">
 
               <ul>
-                <li ng-repeat="champion in champions | filter: { name:search } | orderBy: 'name'">
+                <li ng-repeat="champion in championsArray | filter: { name:search } | orderBy: 'name'">
                   <a href="#/{{champion.id}}">
                       <img ng-src="http://ddragon.leagueoflegends.com/cdn/5.8.1/img/champion/{{ champion.key }}.png">
                       <h6 class="text-center">{{ champion.name }}</h6>

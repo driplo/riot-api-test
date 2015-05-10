@@ -1,7 +1,8 @@
-app.controller('MainController', ['$scope', 'champions', 'freechampions', '$http', 'apiKey', function($scope, champions, freechampions, $http, apiKey) {
+app.controller('MainController', ['$scope', 'champions', 'freechampions', '$http', 'apiKey', '$sanitize', function($scope, champions, freechampions, $http, apiKey, $sanitize) {
 
   champions.success(function (data) {
-    $scope.champions = Object.keys(data.data).map(function (key) { return data.data[key]; });
+    $scope.champions = data;
+    $scope.championsArray = Object.keys(data.data).map(function (key) { return data.data[key]; });
   });
 
   var freeChamps = [];
