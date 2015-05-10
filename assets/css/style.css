@@ -10,10 +10,34 @@ body,html{
     font-family: 'Lato', sans-serif;
 }
 
+.container{
+      background: #EEE;
+}
+
 .Mana{
     background-color:#42A5F5!important;
 }
 
+.Rage{
+    background-color:#D32F2F!important;
+}
+
+.Energy{
+    background-color:#FFC107!important;
+}
+
+.None{
+    background-color:transparent!important;
+    border:1px solid rgba(255,255,255,0.5);
+}
+
+.BloodWell{
+    background-color:#BF360C!important;
+}
+
+.Ferocity{
+    background-color:#666!important;   
+}
 .bg-img {
     position:absolute;
     top:0;
@@ -79,7 +103,7 @@ header{
     background: url('../img/headerbg.png') center;
     -webkit-background-size: cover; /* pour anciens Chrome et Safari */
     background-size: cover; /* version standardisée */
-    height:350px;
+    height:400px;
 }
 
 header h1{
@@ -118,8 +142,9 @@ header h1{
 #free-rotation{
     border-radius: 5px 5px 0 0;
     position: relative;
-    bottom: 70px;
-    background: #fff;
+    margin-bottom: 40px;
+    margin-top: -60px;
+    background: #eee;
     padding:5px;
     height:200px;
 }
@@ -139,6 +164,10 @@ header h1{
 
 #allchampions ul li {
     width:7%;   
+}
+
+#allchampions a{
+    color:#333;
 }
 
 #free-rotation ul li img, #allchampions ul li img{
