@@ -4,6 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
     <link href="assets/css/style.css" rel="stylesheet" />
     <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
@@ -13,13 +14,9 @@
     <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
   </head>
 
-  <body ng-app="championsApp" ng-controller="MainController">
+  <body ng-app="championsApp">
     
     <div ng-view></div>
-    
-    <footer class="container">
-      <small>Version: {{ champions.version }}</small>
-    </footer>
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>

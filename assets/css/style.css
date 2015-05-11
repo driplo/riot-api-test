@@ -48,7 +48,7 @@ body,html{
     z-index:0;
 }
   
-.bg-img:before {
+.bg-img:before{
     content: '';
     position: absolute;
     top: 0;
@@ -84,7 +84,8 @@ h2{
 }
 
 .hero-header{
-    margin-top:100px;
+    margin-top:8%;
+    padding: 0 15px;
 }
 
 .tag{
@@ -101,21 +102,47 @@ h2{
 
 header{
     background: url('../img/headerbg.png') center;
-    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
-    background-size: cover; /* version standardisée */
-    height:400px;
+    -webkit-background-size: cover; 
+    background-size: cover;
+    height:25%;
+    position:relative;
+}
+
+header:before{
+    content:'';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height:100%;
+    left: 0;
+    background: -moz-linear-gradient(top,  rgba(255,137,137,0) 0%, rgba(0,10,23,0.5) 50%, rgba(0,10,23,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,137,137,0)), color-stop(50%,rgba(0,10,23,0.5)), color-stop(100%,rgba(0,10,23,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(255,137,137,0) 0%,rgba(0,10,23,0.5) 50%,rgba(0,10,23,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(255,137,137,0) 0%,rgba(0,10,23,0.5) 50%,rgba(0,10,23,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(255,137,137,0) 0%,rgba(0,10,23,0.5) 50%,rgba(0,10,23,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(255,137,137,0) 0%,rgba(0,10,23,0.5) 50%,rgba(0,10,23,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ff8989', endColorstr='#000a17',GradientType=0 ); /* IE6-9 */
+    z-index:0;
 }
 
 header h1{
     margin:0 auto;
     text-align:center;
-    padding-top:50px;
+    padding-top:5%;
     color:#fff;
+    font-size:15vw;
+    position:relative;
+}
+
+header h1 a, header h1 a:hover {
+    color:#fff;
+    text-decoration:none;
 }
 
 #championSearchForm{
     text-align:center;
-    margin-top:70px;
+    margin:5% 0;
+    position:relative;
 }
 
 #championSearchForm input{
@@ -123,7 +150,8 @@ header h1{
     border: none;
     border-radius: 3px;
     padding: 15px 10px;
-    width: 550px;
+    width:90%;
+    max-width: 550px;
 }
 
 #championSearchForm input::-webkit-input-placeholder{
@@ -141,12 +169,9 @@ header h1{
 /**FREE ROTATION**/
 #free-rotation{
     border-radius: 5px 5px 0 0;
-    position: relative;
     margin-bottom: 40px;
-    margin-top: -60px;
     background: #eee;
     padding:5px;
-    height:200px;
 }
 
 #free-rotation ul, #allchampions ul{
@@ -162,8 +187,17 @@ header h1{
   padding:5px;
 }
 
+#free-rotation ul li{
+    width:20%;   
+}
+
 #allchampions ul li {
-    width:7%;   
+    width:25%;   
+}
+
+#allchampions h6, #free-rotation h5{
+    display: table;
+    width: 100%;   
 }
 
 #allchampions a{
@@ -181,6 +215,7 @@ header h1{
     text-align:justify;
     letter-spacing:1px;
     line-height:1.5em;
+    padding-top: 15px;
 }
 
 .lore h3, .abilities h4{
@@ -191,7 +226,7 @@ header h1{
     background:#EEE;
     /*border:px solid #c67e21;*/
     position:relative;
-    margin-top:150px;
+    margin-top:10%;
 }
 
 .contain-champion .row{
@@ -204,8 +239,10 @@ header h1{
     margin-right:25px;
 }
 
-.abilities{
-    
+.backhome{
+    color:#fff;
+    position:relative;
+    top:15px;
 }
 
 .abilities img{
@@ -226,4 +263,50 @@ box-shadow:         inset 0px 0px 11px 3px rgba(50, 50, 50, 1);
 .skins img{
     width:100%;
     padding: 10px;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    #allchampions ul li {
+           width:15%!important;
+    }
+    
+    header h1{
+        font-size:10vw;   
+    }
+    
+    #free-rotation ul li{
+        width:15%;   
+    }
+    
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    #allchampions ul li {
+        width:10%!important;
+        }
+    
+    header h1{
+        font-size:8vw;   
+    }
+    
+    #free-rotation ul li{
+        width:15%;   
+    }
+    
+}
+/* Medium devices (desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    #allchampions ul li {
+               width:7%!important;
+        }
+    
+    header h1{
+        font-size:6vw;   
+    }
+    
+    #free-rotation ul li{
+        width:10%;   
+    }
 }
