@@ -204,8 +204,10 @@ header h1{
     margin-right:25px;
 }
 
-.abilities{
-    
+.backhome{
+    color:#fff;
+    position:relative;
+    top:15px;
 }
 
 .abilities img{
