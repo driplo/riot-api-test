@@ -19,7 +19,7 @@ app.controller('ChampionController', ['$scope', '$routeParams', 'apiKey', '$http
       // here effectBurn is an array so we can iterate over it and get one by one element
       ability.effectBurn.forEach(function (effect, i) {
         // here we create a regex basically searching in all the text for the '{{ eX }}' pattern where X is the effect burn number
-        text = text.replace(new RegExp('{{ e' + i + ' }}', 'g'), effect);
+        text = text.replace(new RegExp('{{ e' + i + ' }}', 'g'), '<strong>'+effect+'</strong>');
         // if it's found, it will be replaced by the value of the effect
       });
 
@@ -35,7 +35,7 @@ app.controller('ChampionController', ['$scope', '$routeParams', 'apiKey', '$http
           // the link is not really human readable, but I've not fond a way to remap it correctly
           // you can have a look at that endpoint https://global.api.pvp.net/api/lol/static-data/eune/v1.2/language-strings
           // but it's not giving the correct information
-          text = text.replace(new RegExp('{{ ' + variable.key + ' }}', 'g'), variable.coeff[0] * 100 + '% ' + variable.link);
+          text = text.replace(new RegExp('{{ ' + variable.key + ' }}', 'g'), '<span style="color:#FF6F00">'+variable.coeff[0] * 100 + '% ' + variable.link+'</span>');
 
         });
       }

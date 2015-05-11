@@ -1,7 +1,7 @@
 <div class="bg-img" style="background-image:url('http://ddragon.leagueoflegends.com/cdn/img/champion/splash/{{ champion.key }}_0.jpg')"></div>
-<div class="container">
+<div class="container" ng-controller="MainController">
       <div class="row">
-        <div class="col-md-12">
+            <div class="col-md-12">
            <div class="row">
                <a ng-href=".#/" class="backhome"><i class="glyphicon glyphicon-arrow-left"></i> Back to the homepage</a>
                <div class="hero-header">
@@ -28,24 +28,27 @@
             <div class="row abilities">
                 <h3 class="text-uppercase">Abilities</h3>
                 <div class="row">
-                    <div class="col-md-1"><img ng-src="http://ddragon.leagueoflegends.com/cdn/{{ champions.version }}/img/passive/{{ champion.passive.image.full }}"/></div>
-                    <div class="col-md-2">
-                        <h4>{{ champion.passive.name }}</span></h4>
+                    <div class="col-md-1 col-xs-3">
+                        <img ng-src="http://ddragon.leagueoflegends.com/cdn/{{ champions.version }}/img/passive/{{ champion.passive.image.full }}"/>
                     </div>
-                    <div class="col-md-9">
+                    <div class="col-md-2 col-xs-9">
+                        <h4>{{ champion.passive.name }}<br/><small>Passive</small></h4>
+                        
+                    </div>
+                    <div class="col-md-9 col-xs-12">
                         <p>{{ champion.passive.description }}</p>
                     </div>
                 </div>
                 <div class="row" ng-repeat="ability in champion.spells">
-                    <div class="col-md-1"><img ng-src="http://ddragon.leagueoflegends.com/cdn/{{ champions.version }}/img/spell/{{ ability.image.full }}"/></div>
-                    <div class="col-md-2">
+                    <div class="col-md-1 col-xs-3"><img ng-src="http://ddragon.leagueoflegends.com/cdn/{{ champions.version }}/img/spell/{{ ability.image.full }}"/></div>
+                    <div class="col-md-2 col-xs-9">
                         <h4>{{ ability.name }}</span></h4>
                         <span><strong>CD:</strong> {{ ability.cooldownBurn }}</span><br/>
                         <span><strong>Cost:</strong> {{ ability.costBurn }}</span><br/>
                         <span><strong>Range:</strong> {{ ability.rangeBurn }}</span>
                     </div>
-                    <div class="col-md-9">
-                        <p>{{ ability.description }}</p>
+                    <div class="col-md-9 col-xs-12">
+                        <!--<p>{{ ability.description }}</p>-->
                         <p ng-bind-html="populateTooltip(ability) | to_trusted"></p>
                     </div>
                 </div>
@@ -56,4 +59,7 @@
             </div>    
         </div>
       </div>
+      <p class="text-right"><small>Current version: <strong>{{ champions.version }}</strong></small></p>
 </div>
+
+
