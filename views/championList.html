@@ -1,5 +1,5 @@
  <header id="page-header">
-      <h1><a ng-href=".">lolchamps</a></h1>
+      <h1><a ng-href="#/">lolchamps</a></h1>
         <form id="championSearchForm">
           <div class="form-group">
             <input ng-model="search" ng-model="confirmed" placeholder="Search by champion name, ex: “Anivia”">
@@ -13,7 +13,7 @@
               <div id="free-rotation">
                 <ul>    
                   <li ng-repeat="freeChamp in freeChamps | orderBy: 'name'">
-                   <a ng-href="{{ freeChamp.id }}">
+                   <a ng-href="#/{{ freeChamp.id }}">
                     <img ng-src="http://ddragon.leagueoflegends.com/cdn/{{ champions.version }}/img/champion/{{ freeChamp.key }}.png">
                     <h5 class="text-center">{{ freeChamp.key }}</h5>
                     </a>
@@ -28,7 +28,7 @@
 
               <ul>
                 <li ng-repeat="champion in championsArray | filter: { name:search } | orderBy: 'name'">
-                  <a ng-href="{{ champion.id }}">
+                  <a ng-href="#/{{ champion.id }}">
                       <img ng-src="http://ddragon.leagueoflegends.com/cdn/{{ champions.version }}/img/champion/{{ champion.key }}.png">
                       <h6 class="text-center">{{ champion.name }}</h6>
                   </a>

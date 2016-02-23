@@ -1,9 +1,7 @@
 var app = angular.module('championsApp', ['ngRoute', 'ngSanitize']);
 
 app
-  .config(function ($routeProvider, $locationProvider) {
-    
-    $locationProvider.html5Mode(true);
+  .config(function ($routeProvider) {
 
     $routeProvider
       .when('/', {

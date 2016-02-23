@@ -10,7 +10,6 @@ app.controller('MainController', ['$scope', 'champions', 'freechampions', '$http
   freechampions.success(function (data) {
 
     $scope.freechampions = data;
-    console.log('Nombre de champions free:' + $scope.freechampions.champions.length);
 
     for (var i = 0; i < $scope.freechampions.champions.length; i++) {
       $http({
