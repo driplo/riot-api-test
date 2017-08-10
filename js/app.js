@@ -16,7 +16,7 @@ app
 
   })
 
-  .constant('apiKey', 'f1fe37d2-6955-48ce-bc41-7cbc084efd83')
+  .constant('apiKey', 'RGAPI-3b85e6e8-fa81-491a-acc0-6db5025b7e1d')
 
   .filter('to_trusted', ['$sce', function ($sce) {
     return function (text) {
